@@ -58,8 +58,11 @@ userSchema.virtual('posts', {
 });
 
 userSchema.pre('save', async function () {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt); // https://stackoverflow.com/questions/11325372/mongoose-odm-change-variables-before-saving
+    if (this.password && this.isModified('password')) {
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
+    }
+    // https://stackoverflow.com/questions/11325372/mongoose-odm-change-variables-before-saving
 })
 
 userSchema.pre('remove', function() {

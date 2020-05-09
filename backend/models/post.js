@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-let User = require('./user');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
@@ -20,7 +19,7 @@ const postSchema = new Schema({
     content: {
         type: String,
         trim: true,
-        required: 'Post body cannot be blank',
+        required: 'Post content cannot be blank',
     }
 }, {
     timestamps: true

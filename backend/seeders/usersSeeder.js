@@ -1,6 +1,5 @@
 import { Seeder } from 'mongoose-data-seed';
 import User from '../models/user';
-import bcrypt from 'bcryptjs';
 
 const data = [
     {
@@ -43,11 +42,11 @@ class UsersSeeder extends Seeder {
     }
 
     async run() {
-        for (const item of data) {
+        /*for (const item of data) {
             let index = data.indexOf(item);
             const salt = await bcrypt.genSalt(10);
             item.password = await bcrypt.hash(item.password, salt);
-        }
+        }*/
         return User.create(data);
     }
 

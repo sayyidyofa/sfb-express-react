@@ -38,19 +38,20 @@ router.route('/').post(isAuth, isAdmin, (req, res) => {
     const newUser = new User({name, username, password, role});
 
     newUser.save()
-        .then(() => res.json('User added'))
+        .then((user) => res.json({id: user.id}))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:id/update').post(isAuth, isAdmin, (req, res) => {
+router.route('/:id').put(isAuth, isAdmin, (req, res) => {
     User.findById(req.params.id)
         .then(User => {
             User.username = req.body.username;
             User.name = req.body.name;
             User.role = req.body.role || 'user';
+            if (req.body.password !== undefined && typeof req.body.password === 'string' && req.body.password.length > 0) User.password = req.body.password;
 
             User.save()
-                .then(() => res.json('User updated'))
+                .then(() => res.json({id: User.id}))
                 .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));

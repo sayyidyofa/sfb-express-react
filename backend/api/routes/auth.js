@@ -2,7 +2,6 @@ const { check, validationResult } = require("express-validator/check");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = require('express').Router();
-const transformer = require('../../helpers/transform');
 let User = require('../../models/user');
 
 router.post(
@@ -43,9 +42,7 @@ router.post(
 
             await user.save();
 
-            const userDTO = transformer.toUserDto(user);
-
-            res.status(200).json(userDTO);
+            res.status(200).json({id: user.id});
 
         } catch (err) {
             console.log(err.message);

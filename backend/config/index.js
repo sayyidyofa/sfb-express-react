@@ -8,7 +8,7 @@ const config = {
             password: "secret"
         },
         admin: {
-            username: "admin",
+            username: "admin1",
             password: "secret"
         }
     }
