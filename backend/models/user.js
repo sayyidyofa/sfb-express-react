@@ -42,8 +42,7 @@ const userSchema =
             virtuals: true,
             versionKey: false,
             transform(doc, ret) {
-
-                delete ret.role;
+                //delete ret.role;
                 delete ret.password;
                 delete ret._id;
             }

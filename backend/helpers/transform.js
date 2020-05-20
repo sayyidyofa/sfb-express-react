@@ -4,11 +4,13 @@ exports.toUserDto = (userObject, withPosts = false) => {
         id: userObject.id,
         name: userObject.name,
         username: userObject.username,
-        posts: userObject.posts
+        posts: userObject.posts,
+        role: userObject.role
     } : {
         id: userObject.id,
         name: userObject.name,
-        username: userObject.username
+        username: userObject.username,
+        role: userObject.role
     }
 }
 

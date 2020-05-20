@@ -20,7 +20,7 @@ Run the server `npm run dev`
 ### Frontend
 Follow the instructions at the readme inside the frontend directory
 
-The frontend uses [CoreUI](https://github.com/coreui/coreui-free-react-admin-template) template
+The frontend uses [Semantic UI React](https://react.semantic-ui.com/) framework
 
 ## References
 

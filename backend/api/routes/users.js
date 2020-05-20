@@ -8,7 +8,7 @@ router.get("/me", isAuth, async (req, res) => {
     try {
         // request.user is getting fetched from Middleware after token authentication
         User.findById(req.user.id).populate("posts").exec((error, userWithPosts) => {
-            res.json(transformer.toUserDto(userWithPosts, true))
+            res.json(userWithPosts)
         });
         /*const user = await User.findById(req.user.id).populate("posts").exec();
         const userDTO = transformer.toUserDto(user);
