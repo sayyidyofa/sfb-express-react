@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { usersURL } from "../config";
 import axios from 'axios';
 import '../assets/fomantic/dist/semantic.css';
-import {Container, Header, Item } from "semantic-ui-react";
+import { Item } from "semantic-ui-react";
 import {Link} from "react-router-dom";
 
 class UsersIndex extends Component {
@@ -25,7 +25,7 @@ class UsersIndex extends Component {
                 {this.state.users.map((user, index)=>{
                     return <Item key={index}>
                         <Item.Content>
-                            <Item.Header as={Link} to={'post/'+user.id+'/edit'}> { user.name } </Item.Header>
+                            <Item.Header as={'a'} href={window.location.href.replace('/home/admin', '/') + 'user/'+user.id+'/edit'}> { user.name } </Item.Header>
                             {/*<Item.Description>Username: {user.username}</Item.Description>*/}
                             <Item.Meta> Created at: {user.createdAt} </Item.Meta>
                             <Item.Extra> Updated at: {user.updatedAt} </Item.Extra>

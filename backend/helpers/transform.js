@@ -20,6 +20,7 @@ exports.toPostDto = (postObject) => {
         title: postObject.title,
         content: postObject.content,
         createdAt: postObject.createdAt,
-        updatedAt: postObject.updatedAt
+        updatedAt: postObject.updatedAt,
+        author: postObject.author.name
     }
 }

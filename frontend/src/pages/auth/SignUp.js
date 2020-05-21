@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-import { authURL, usersURL } from "../../config";
+import { authURL } from "../../config";
 import { Button, Form, Message } from "semantic-ui-react";
 import Layout from "./Layout";
 import Swal from "sweetalert2";
@@ -94,7 +94,7 @@ class Signup extends Component {
             <Layout header="Sign up to get started">
                 <Form.Input
                     fluid
-                    icon="user"
+                    icon="address card outline"
                     iconPosition="left"
                     placeholder="Your name"
                     className="auth-input-field"
@@ -102,7 +102,7 @@ class Signup extends Component {
                 />
                 <Form.Input
                     fluid
-                    icon="lock"
+                    icon="user"
                     iconPosition="left"
                     placeholder="Your username"
                     className="auth-input-field"

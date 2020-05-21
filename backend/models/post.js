@@ -25,6 +25,12 @@ const postSchema = new Schema({
     timestamps: true
 });
 
+/*postSchema.virtual('author_name', {
+    ref: 'User',
+    localField: 'author',
+
+});*/
+
 /*postSchema.post('save', (postDoc) => {
     User.findByIdAndUpdate(
         postDoc.author,
