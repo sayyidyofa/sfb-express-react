@@ -4,6 +4,10 @@ Simple Flat Blog using Express and React
 
 This repo contains both backend and frontend in each respective directories.
 
+## Brief Documentation
+
+Download [docx](https://github.com/sayyidyofa/sfb-express-react/raw/master/Tugas%20PBD_UAS.doc)
+
 ## Set Up
 
 ### Backend
