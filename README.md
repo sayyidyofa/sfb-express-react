@@ -4,9 +4,12 @@ Simple Flat Blog using Express and React
 
 This repo contains both backend and frontend in each respective directories.
 
-## Brief Documentation
+## Demo untuk Tugas UAS
 
-Download [docx](https://github.com/sayyidyofa/sfb-express-react/raw/master/Tugas%20PBD_UAS.doc)
+Akses demo di link: https://sfb-express.projects.lazydev.me/
+Login dengan username: `admin1` dan password `secret`
+
+Dokumentasi: download [docx](https://github.com/sayyidyofa/sfb-express-react/raw/master/Tugas%20PBD_UAS.doc)
 
 ## Set Up
 
