@@ -4,6 +4,8 @@ Simple Flat Blog using Express and React
 
 This repo contains both backend and frontend in each respective directories.
 
+This project is made for college final assignment, Database Programming course.
+
 ## Set Up
 
 ### Backend
